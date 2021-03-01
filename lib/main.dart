@@ -40,45 +40,53 @@ class MyApp extends StatelessWidget {
             ),
             SingleChildScrollView(
               padding: EdgeInsets.fromLTRB(0, 180, 0, 0),
-              child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+              child:
+                  Column(mainAxisAlignment: MainAxisAlignment.end, children: [
                 Center(
                   child: Container(
-                    decoration: BoxDecoration(
+                      decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(60),
-                          topRight: Radius.circular(60)
-                    ),
-                    color: Colors.white,
-                    ),
-                    height: 520,
-                    width: double.infinity,
-                    child:Column(
-                      children: [
-                        SizedBox(
-                          height: 100,
-                        ),
-                        Card(
-                          margin: EdgeInsets.all(12),
-                          elevation: 0,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              labelText: "User Name",
-                              hintText: "user name",
+                            topLeft: Radius.circular(60),
+                            topRight: Radius.circular(60)),
+                        color: Colors.white,
+                      ),
+                      height: 520,
+                      width: double.infinity,
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 60,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(12),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(15),
+                                    borderSide:
+                                        BorderSide(color: Color(0xFFAAB5C3))),
+                                contentPadding: EdgeInsets.all(12),
+                                labelText: "User Name",
+                                hintText: "user name",
+                              ),
                             ),
                           ),
-                        ),
-                        Card(
-                          margin: EdgeInsets.all(12),
-                          elevation: 0,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              labelText: "password",
-                              hintText: "password",
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(12, 6, 12, 12),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(15),
+                                    borderSide:
+                                        BorderSide(color: Color(0xFFAAB5C3))),
+                                contentPadding: EdgeInsets.all(12),
+                                labelText: "User Name",
+                                hintText: "user name",
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    )
+                        ],
+                      ),
                   ),
                 ),
               ]),
